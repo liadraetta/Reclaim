@@ -1,6 +1,8 @@
 import json
 import os
 import csv
+from helper import drop_duplicates
+import pandas as pd
 
 target_words = [
     "frocie", "froci", "checca ", "culattone", "finocchi", "finocchietto", "finocchio", "frocio", " stesso sesso", "travestiti", "travestito", "travestita‍️", "travestite", "frocia", "ricchione", " trans "
@@ -88,3 +90,4 @@ with open(csv_file, mode="w", newline="", encoding="utf-8") as file:
 
 print(f"CSV file saved successfully to '{csv_file}'.")
 
+drop_duplicates("output/2022.csv")
